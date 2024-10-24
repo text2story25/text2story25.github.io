@@ -364,24 +364,35 @@ button:focus,
  *-------------------*/
 
 .jumbotron {
-  background: url("../img/bg/dalle_darker.jpg");
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+  background: url("../img/bg/luccaa.webp");
   background-size: cover;
   padding: 0;
   margin: 0;
   height: 100vh;
   min-height: 700px;
   vertical-align: middle;
-  position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
   overflow: hidden;
-  /* opacity: 0.95; */
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55); /* Adjust the color and opacity */
+  z-index: 1; /* Ensure the overlay is above the background image */
 }
 
 .jumbotron .content {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
   color: #ffffff;
-  position: absolute;
   top: 50%;
   left: 0;
   right: 0;
