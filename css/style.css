@@ -365,7 +365,7 @@ button:focus,
 
 .jumbotron {
   position: relative; /* Ensure the pseudo-element is positioned correctly */
-  background: url("../img/bg/luccaa.webp");
+  background: url("../img/bg/lucca.webp");
   background-size: cover;
   padding: 0;
   margin: 0;
