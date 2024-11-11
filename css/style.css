@@ -918,3 +918,16 @@ button:focus,
 .direction-r .desc {
   margin: 1em 0 0 0.75em;
 }
+
+.row.text-center {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    flex-wrap: wrap; /* Ensures items wrap to the next line if necessary */
+}
+
+.col-sm-3 {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally within the column */
+    align-items: center; /* Centers the image vertically within the column */
+}
