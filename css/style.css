@@ -963,10 +963,15 @@ button:focus,
 }
 
 .carousel-control .fa-chevron-left,
-.carousel-control .fa-chevron-right {
+.carousel-control .fa-chevron-right,
+.carousel-control .control-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
     color: #337ab7;
     text-shadow: none;
+    background: rgba(255, 255, 255, 0);
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -975,12 +980,17 @@ button:focus,
     top: 50%;
     margin-top: -20px;
     text-align: center;
+    /* Safari-specific fixes */
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
 }
 
-.carousel-control .fa-chevron-left {
+.carousel-control .fa-chevron-left,
+.carousel-control .control-icon.fa-chevron-left {
     left: 20px;
 }
 
-.carousel-control .fa-chevron-right {
+.carousel-control .fa-chevron-right,
+.carousel-control .control-icon.fa-chevron-right {
     right: 20px;
 }
