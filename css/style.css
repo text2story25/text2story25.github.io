@@ -965,9 +965,7 @@ button:focus,
 .carousel-control .fa-chevron-left,
 .carousel-control .fa-chevron-right,
 .carousel-control .control-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     font-size: 30px;
     color: #337ab7;
     text-shadow: none;
@@ -983,6 +981,12 @@ button:focus,
     /* Safari-specific fixes */
     -webkit-transform: translateZ(0);
     -webkit-font-smoothing: antialiased;
+    transform: translateY(-50%);
+}
+
+.carousel-control .control-icon:before {
+    position: relative;
+    top: 5px;
 }
 
 .carousel-control .fa-chevron-left,
