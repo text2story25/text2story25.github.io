@@ -50,5 +50,35 @@ jQuery(function ($) {
             }
         });
     }());
+    
+    // --------------------------------------------------------------------
+    // Event Photos Carousel Initialization
+    // --------------------------------------------------------------------
+    
+    (function () {
+        // Initialize the carousel
+        $('#eventPhotosCarousel').carousel({
+            interval: 5000,
+            pause: "hover",
+            wrap: true
+        });
+        
+        // Add swipe support for touch devices
+        if (navigator.userAgent.match(/Android|iPhone|iPad|iPod|Windows Phone/i)) {
+            $("#eventPhotosCarousel").on("touchstart", function (e) {
+                var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                this.touchStartX = touch.pageX;
+            }).on("touchmove", function (e) {
+                e.preventDefault();
+            }).on("touchend", function (e) {
+                var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                if (touch.pageX - this.touchStartX > 50) {
+                    $(this).carousel('prev');
+                } else if (this.touchStartX - touch.pageX > 50) {
+                    $(this).carousel('next');
+                }
+            });
+        }
+    }());
 
 }); // JQuery end

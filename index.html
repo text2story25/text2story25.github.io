@@ -22,48 +22,6 @@
     <link rel="icon" href="img/t2s-logo.ico">
 
     <!-- Custom styles for carousel -->
-    <style>
-        .carousel-inner {
-            background-color: transparent;
-            border-radius: 0;
-            box-shadow: none;
-            padding: 0;
-        }
-
-        .carousel-caption {
-            display: none;
-        }
-
-        .carousel-indicators {
-            bottom: 0;
-        }
-
-        .carousel-indicators li {
-            border-color: #337ab7;
-        }
-
-        .carousel-indicators .active {
-            background-color: #337ab7;
-        }
-
-        .carousel-control {
-            width: 5%;
-            opacity: 0.8;
-            background-image: none !important;
-        }
-
-        .carousel-control .glyphicon-chevron-left,
-        .carousel-control .glyphicon-chevron-right {
-            font-size: 30px;
-            color: #337ab7;
-            text-shadow: none;
-            background: rgba(255, 255, 255, 0.7);
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 50%;
-        }
-    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -1453,34 +1411,6 @@
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/scripts.js"></script>
 
-        <!-- Initialize carousel -->
-        <script>
-            $(document).ready(function () {
-                // Initialize the carousel
-                $('#eventPhotosCarousel').carousel({
-                    interval: 5000,
-                    pause: "hover",
-                    wrap: true
-                });
-
-                // Add swipe support for touch devices
-                if (navigator.userAgent.match(/Android|iPhone|iPad|iPod|Windows Phone/i)) {
-                    $("#eventPhotosCarousel").on("touchstart", function (e) {
-                        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-                        this.touchStartX = touch.pageX;
-                    }).on("touchmove", function (e) {
-                        e.preventDefault();
-                    }).on("touchend", function (e) {
-                        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-                        if (touch.pageX - this.touchStartX > 50) {
-                            $(this).carousel('prev');
-                        } else if (this.touchStartX - touch.pageX > 50) {
-                            $(this).carousel('next');
-                        }
-                    });
-                }
-            });
-        </script>
 </body>
 
 </html>

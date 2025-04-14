@@ -931,3 +931,56 @@ button:focus,
     justify-content: center; /* Centers the image horizontally within the column */
     align-items: center; /* Centers the image vertically within the column */
 }
+
+/* Carousel Styles */
+.carousel-inner {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.carousel-caption {
+    display: none;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-indicators li {
+    border-color: #337ab7;
+}
+
+.carousel-indicators .active {
+    background-color: #337ab7;
+}
+
+.carousel-control {
+    width: 5%;
+    opacity: 0.8;
+    background-image: none !important;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+    font-size: 30px;
+    color: #337ab7;
+    text-shadow: none;
+    background: rgba(255, 255, 255, 0.7);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.carousel-control .glyphicon-chevron-left {
+    left: 20px;
+}
+
+.carousel-control .glyphicon-chevron-right {
+    right: 20px;
+}
