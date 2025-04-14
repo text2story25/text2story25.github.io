@@ -962,12 +962,11 @@ button:focus,
     background-image: none !important;
 }
 
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
+.carousel-control .fa-chevron-left,
+.carousel-control .fa-chevron-right {
     font-size: 30px;
     color: #337ab7;
     text-shadow: none;
-    background: rgba(255, 255, 255, 0.7);
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -975,12 +974,13 @@ button:focus,
     position: absolute;
     top: 50%;
     margin-top: -20px;
+    text-align: center;
 }
 
-.carousel-control .glyphicon-chevron-left {
+.carousel-control .fa-chevron-left {
     left: 20px;
 }
 
-.carousel-control .glyphicon-chevron-right {
+.carousel-control .fa-chevron-right {
     right: 20px;
 }
